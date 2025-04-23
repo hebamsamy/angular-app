@@ -1,9 +1,10 @@
 import { Routes } from "@angular/router";
 import { ProductListComponent } from "./Components/product-list/product-list.component";
 import { todolistComponent } from "./Components/todolist/todolist.component";
+import { NotfoundComponent } from "./Components/notfound/notfound.component";
 
-let AppRouts:Routes=[
+export let AppRouts:Routes=[
     {path:"products",component:ProductListComponent},
-    {path:"todo",component:todolistComponent},
-
+    {path:"todolist",component:todolistComponent},
+    {path:"**" , component:NotfoundComponent}
 ]

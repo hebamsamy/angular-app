@@ -8,9 +8,10 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { todolistComponent } from './Components/todolist/todolist.component';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { ProductCardComponent } from './Components/product-card/product-card.component';
-import { ProductService } from '../Services/product.service';
+import { AppRouts } from './app.route';
 import { InitComponent } from './Components/init/init.component';
 import { RouterModule } from '@angular/router';
+import { NotfoundComponent } from './Components/notfound/notfound.component';
 
 @NgModule({
   // childern
@@ -21,13 +22,14 @@ import { RouterModule } from '@angular/router';
     ProductListComponent,
     ProductCardComponent,
     MoneyPipe,
-    InitComponent
+    InitComponent,
+    NotfoundComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     BrowserModule,
-    RouterModule
+    RouterModule.forRoot(AppRouts)
   ],
   bootstrap:[InitComponent],
   // exports:[],

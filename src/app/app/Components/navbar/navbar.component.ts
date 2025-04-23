@@ -7,8 +7,8 @@ import { Component } from "@angular/core";
         {{current | date :"yyyy_MM_dd"}} ||
         {{current | date :"longTime"}}
       <br>
-      salary in Dollor {{salary}} || and in EGP {{salary|money:0}}
-      || and in SR {{salary|money:3}}
+      <a routerLink="/products">Products</a>
+      <a routerLink="/todolist">Todo list</a>
     </nav>
     `,
     styles:`
