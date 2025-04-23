@@ -23,10 +23,26 @@
 <hr>
 
 @for (item of list; track $index) {
-    <div>{{item}}</div>
+    <div
+     class="row"
+    [ngClass]="{
+        'text-danger ': ! item.isDone,
+        'text-success text-decoration-line-through': item.isDone
+    }" 
+   
+     >
+     <p class="col-9">
+        {{item.text  |uppercase| slice:5:10}} 
+     </p>
+     <input class="col-3" type="checkbox" (change)="change(item.id)">
+    </div>
 }
 
 <!-- templete #---- -->
 <!-- <input type="text" [value]="title" #temp (keyup.enter)="test(temp.value)">
 <input type="button" (click)="test(temp.value)"> -->
 
+
+
+
+<app-footer></app-footer>
