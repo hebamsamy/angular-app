@@ -12,6 +12,8 @@ import { AppRouts } from './app.route';
 import { InitComponent } from './Components/init/init.component';
 import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './Components/notfound/notfound.component';
+import { ProductDetailsComponent } from './Components/product-Details/product-Details.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   // childern
@@ -23,7 +25,8 @@ import { NotfoundComponent } from './Components/notfound/notfound.component';
     ProductCardComponent,
     MoneyPipe,
     InitComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,9 @@ import { NotfoundComponent } from './Components/notfound/notfound.component';
   ],
   bootstrap:[InitComponent],
   // exports:[],
-  providers:[],
+  providers:[
+    provideHttpClient(withFetch())
+  ],
 })
 export class AppModule { }
 

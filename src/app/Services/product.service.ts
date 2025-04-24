@@ -142,4 +142,10 @@ export class ProductService {
       return this.Products.filter(item=>item.categoryID == CatagoryId)
     }
   }
+
+findById(id:number):IProduct|undefined{
+  return this.Products.find((item)=>item.id == id)
+}
+
+
 }

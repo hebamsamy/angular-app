@@ -3,6 +3,8 @@
   <div class="card-body">
     <h5 class="card-title">{{Product.name}}</h5>
     <p class="card-text">{{Product.price |currency:"EGP"}}</p>
-    <a href="#" class="btn btn-primary" (click)="add()">Add to cart</a>
+    <a  class="btn btn-success" routerLink="/product/{{Product.id}}">See Details</a>
+    <!-- <a  class="btn btn-success" [routerLink]="['/product',Product.id]">See Details</a> -->
+    <a  class="btn btn-primary" (click)="add()">Add to cart</a>
   </div>
 </div>
